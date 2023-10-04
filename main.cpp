@@ -1,6 +1,13 @@
 #include <iostream>
 
+void test() {
+    static int counter = 1;
+    counter++;
+    std::cout << counter << std::endl;
+    test();
+}
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    test();
     return 0;
 }
